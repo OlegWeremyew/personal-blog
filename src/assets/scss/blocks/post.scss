@@ -9,10 +9,11 @@
 }
 
 .post__header {
-  margin: -2.5rem -2.5rem 2.5rem;
 
-  &--video {
-    margin: 0 0 2.5rem;
+  margin: 0 0 2.5rem;
+
+  &--preview {
+    margin: -2.5rem -2.5rem 2.5rem;
   }
 }
 
@@ -33,19 +34,73 @@
   color: $white;
   font-weight: 500;
 
+  &--mb0 {
+    margin-bottom: 0;
+  }
+
   a {
     color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
+}
+
+.post__description {
+  font-size: 1.4rem;
+  color: #D2D2D2;
 }
 
 .post__text {
   font-size: 1.4rem;
-  color: #D2D2D2;
+  color: $white;
+  border-bottom: 1px solid $borderColor;
+  padding-bottom: 1rem;
+
+  h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1.1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  h5, h6 {
+    font-size: 1em;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  ul, ol {
+    margin-bottom: 2rem;
+  }
+
+  ol {
+    list-style: decimal inside;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: $blue;
+  }
 }
 
 .post__footer {
@@ -62,11 +117,6 @@
 
   a {
     color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -89,14 +139,40 @@
 .post__read {
   font-size: 1.4rem;
   color: #107EFF;
-  text-decoration: none;
+}
 
-  &:hover {
-    text-decoration: underline;
+.post__actions {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.2rem;
+  color: $white;
+
+  a {
+    color: inherit;
+    opacity: 0.6;
+    transition: opacity 0.1s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-icon {
+    margin-left: 0.5rem;
   }
 }
 
+.post__subtitle {
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $white;
+}
 
 
 
