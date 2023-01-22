@@ -1,0 +1,21 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tags__item {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.9rem;
+
+  background-color: #EA8C1E;
+  border-radius: 0.3rem;
+
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: $white;
+  text-align: center;
+  vertical-align: center;
+  cursor: pointer;
+}
