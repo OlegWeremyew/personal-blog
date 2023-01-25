@@ -6,11 +6,23 @@
 .related__list {
   display: flex;
   flex-wrap: wrap;
+
+  @include breakpoint($mobile-bp) {
+    flex-direction: column;
+  }
 }
 
 .related__list-item {
   margin-bottom: 2.5rem;
   width: 50%;
+
+  @include breakpoint($tablet-bp) {
+    padding-left: 1rem;
+  }
+
+  @include breakpoint($mobile-bp) {
+    width: 100%;
+  }
 }
 
 .related__list-title {

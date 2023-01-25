@@ -4,6 +4,8 @@
   }
 
   &--mobile {
+    display: none;
+
     @include breakpoint($tablet-bp) {
       display: block;
       margin: 3rem 0;

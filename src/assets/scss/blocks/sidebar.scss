@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   z-index: $z-index-sidebar;
+  transition: 0.3s transform linear;
 
   @include breakpoint($tablet-bp) {
     display: flex;
