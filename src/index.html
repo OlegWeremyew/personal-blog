@@ -3,7 +3,7 @@ layout: default
 title: Personal blog | Home
 ---
 
-<div class="stories">
+<div class="stories" data-modal="story-modal">
 	<div class="stories__item">
 		<img class="stories__preview" src="assets/images/stories/stories-1.jpg" alt="stories-1">
 		<div class="stories__title">Отдыхаю на природе</div>
@@ -29,7 +29,7 @@ title: Personal blog | Home
 <!-- Add post -->
 <div class="add-post">
 	<form class="add-post__form" action="/" method="post">
-		<textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь"></textarea>
+		<textarea class="add-post__textarea" data-autoresize name="post-text" placeholder="Напишите что-нибудь"></textarea>
 
 		<div class="add-post__form-actions">
 			<label class="add-post__file" for="add-post-file">

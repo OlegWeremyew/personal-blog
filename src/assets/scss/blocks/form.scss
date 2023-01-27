@@ -22,7 +22,7 @@
 
   background: none;
   border: none;
-  border-bottom: 1px solid #3F3F3F;
+  border-bottom: 0.1rem solid #3F3F3F;
   border-radius: 0;
   box-shadow: none;
   outline: none;
@@ -32,7 +32,7 @@
   color: $white;
 
   &::placeholder {
-    color: rgba($white, 0.2)
+    color: rgba($white, 0.2);
   }
 
   &:focus + .form__line {
@@ -44,9 +44,10 @@
   }
 
   &--textarea {
-    height: 30px;
+    height: 3.2rem;
     resize: none;
     overflow: hidden;
+    vertical-align: center;
   }
 }
 

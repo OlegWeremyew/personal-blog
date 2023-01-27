@@ -3,10 +3,9 @@
 <head>
 	{{> head }}
 </head>
-<!--<body class="no-scroll">-->
-<!--<body class="show-sidebar">-->
+
 <body>
-<div class="page">
+<div class="page" id="page">
 	{{> header }}
 	{{> sidebar }}
 	<main class="main">
@@ -15,6 +14,8 @@
 </div>
 
 {{> story-model }}
+{{> contact-model }}
+{{> share-model }}
 
 <script src="assets/js/app.js"></script>
 </body>
