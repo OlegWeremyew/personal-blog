@@ -2,6 +2,7 @@
 
 const {src, dest} = require("gulp");
 const gulp = require("gulp");
+const ghPages = require('gulp-gh-pages');
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
@@ -213,6 +214,11 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
+
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 
 /* Exports Tasks */
