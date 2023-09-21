@@ -1,4 +1,4 @@
-# Landing banner BP Mobile test
+# Gulp website landing
 
 1. *GitHub repository*: https://github.com/OlegWeremyew/personal-blog
 2. *GitHub-Pages*: https://olegweremyew.github.io/personal-blog

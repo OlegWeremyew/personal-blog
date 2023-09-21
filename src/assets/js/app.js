@@ -53,7 +53,6 @@ function closeModal(modal) {
 //=================================================
 
 const BURGER = document.getElementById("sidebarToggle");
-const SIDEBAR = document.getElementById("sidebar");
 const PAGE = document.getElementById("page");
 
 BURGER.addEventListener("click", (event) => {

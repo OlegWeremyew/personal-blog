@@ -29,23 +29,23 @@ const path = {
     js: distPath + "assets/js/",
     css: distPath + "assets/css/",
     images: distPath + "assets/images/",
-    fonts: distPath + "assets/fonts/"
+    fonts: distPath + "assets/fonts/",
   },
   src: {
     html: srcPath + "*.html",
     js: srcPath + "assets/js/*.js",
     css: srcPath + "assets/scss/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
   },
   watch: {
     html: srcPath + "**/*.html",
     js: srcPath + "assets/js/**/*.js",
     css: srcPath + "assets/scss/**/*.scss",
     images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+    fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
   },
-  clean: "./" + distPath
+  clean: "./" + distPath,
 }
 
 
@@ -54,8 +54,8 @@ const path = {
 function serve() {
   browserSync.init({
     server: {
-      baseDir: "./" + distPath
-    }
+      baseDir: "./" + distPath,
+    },
   });
 }
 
@@ -68,7 +68,7 @@ function html(cb) {
       layouts: srcPath + 'layouts/',
       partials: srcPath + 'partials/',
       helpers: srcPath + 'helpers/',
-      data: srcPath + 'data/'
+      data: srcPath + 'data/',
     }))
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({stream: true}));
@@ -82,13 +82,13 @@ function css(cb) {
       errorHandler: function (err) {
         notify.onError({
           title: "SCSS Error",
-          message: "Error: <%= error.message %>"
+          message: "Error: <%= error.message %>",
         })(err);
         this.emit('end');
       }
     }))
     .pipe(sass({
-      includePaths: './node_modules/'
+      includePaths: './node_modules/',
     }))
     .pipe(autoprefixer({
       cascade: true
@@ -104,7 +104,7 @@ function css(cb) {
     .pipe(removeComments())
     .pipe(rename({
       suffix: ".min",
-      extname: ".css"
+      extname: ".css",
     }))
     .pipe(dest(path.build.css))
     .pipe(browserSync.reload({stream: true}));
@@ -118,17 +118,17 @@ function cssWatch(cb) {
       errorHandler: function (err) {
         notify.onError({
           title: "SCSS Error",
-          message: "Error: <%= error.message %>"
+          message: "Error: <%= error.message %>",
         })(err);
         this.emit('end');
       }
     }))
     .pipe(sass({
-      includePaths: './node_modules/'
+      includePaths: './node_modules/',
     }))
     .pipe(rename({
       suffix: ".min",
-      extname: ".css"
+      extname: ".css",
     }))
     .pipe(dest(path.build.css))
     .pipe(browserSync.reload({stream: true}));
@@ -142,7 +142,7 @@ function js(cb) {
       errorHandler: function (err) {
         notify.onError({
           title: "JS Error",
-          message: "Error: <%= error.message %>"
+          message: "Error: <%= error.message %>",
         })(err);
         this.emit('end');
       }
@@ -151,7 +151,7 @@ function js(cb) {
       mode: "production",
       output: {
         filename: 'app.js',
-      }
+      },
     }))
     .pipe(dest(path.build.js))
     .pipe(browserSync.reload({stream: true}));
@@ -165,7 +165,7 @@ function jsWatch(cb) {
       errorHandler: function (err) {
         notify.onError({
           title: "JS Error",
-          message: "Error: <%= error.message %>"
+          message: "Error: <%= error.message %>",
         })(err);
         this.emit('end');
       }
@@ -174,7 +174,7 @@ function jsWatch(cb) {
       mode: "development",
       output: {
         filename: 'app.js',
-      }
+      },
     }))
     .pipe(dest(path.build.js))
     .pipe(browserSync.reload({stream: true}));

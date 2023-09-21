@@ -1,13 +1,10 @@
 .subnav {
   display: none;
-
   width: 16.5rem;
   padding: 0.5rem 0;
-
   background-color: $blue;
   border-radius: 0 0 5px 5px;
   box-shadow: 0, 6px, 8px, rgba($black, 0.2);
-
   position: absolute;
   top: 100%;
   left: 0;
@@ -15,9 +12,7 @@
   @include breakpoint($tablet-bp) {
     position: static;
     width: 100%;
-
     padding-left: 1rem;
-
     background-color: transparent;
     box-shadow: none;
   }
@@ -26,11 +21,9 @@
 .subnav__link {
   display: block;
   padding: 0.45rem 1.2rem;
-
   font-size: 1.2rem;
   color: $white;
   text-decoration: none;
-
   transition: background-color 0.2s ease-in-out;
 
   &:hover {
@@ -41,7 +34,6 @@
   @include breakpoint($tablet-bp) {
     padding-left: 0;
     padding-right: 0;
-
     font-size: 1.5rem;
 
     &:hover {
